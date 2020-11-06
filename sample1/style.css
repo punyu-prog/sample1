@@ -1,0 +1,316 @@
+/* ------------------- */
+/*       ベース 
+/* ------------------- */
+html{
+  font-size: 62.5%;
+}
+body{
+  font-size: 1.6rem;
+  letter-spacing: .05em;
+  color: #171717;
+  font-family: 'Noto Serif','Noto Serif JP', serif;
+}
+img{
+  width: 100%;              /* 親要素の中で常に最大100%の大きさ */
+  vertical-align: bottom;   /*  画像の下に小さな余白ができるのを防ぐ*/
+  object-fit: cover;        /*  なくても良い*/
+}
+
+/* ヘッダー */
+.header{
+  padding: 19px 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 100%;
+  }
+  .header-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  }
+  .header a{
+  color: #fff;
+  text-decoration: none;
+  transition: .3s;
+  font-weight: bold;
+  }
+  .header a:hover{
+  opacity: .7;
+  transition: .3s;
+  }
+  .site-title{
+  font-size: 2.6rem;
+  margin-left: 50px;
+  }
+  .nav-list{
+  display: flex;
+  list-style-type: none;   /* リストの黒丸を消す */
+  }
+  ul.nav-list{
+    margin-right: 20px;
+  }
+  .header a span{
+    background-color: #67a8fd;
+    padding: 10px;
+  }
+  .nav-item{
+  margin-right: 30px;
+  }
+  .nav-item:last-of-type{
+  margin-right: 0; /* 最後のアイテムのマージンがつかない */
+  }
+  .burger-btn{
+  display: none;
+  }
+  /* //ヘッダー */
+  /* fv */
+  .fv{
+  height: 100vh; /*高さを画面と合わせる*/
+  min-height: 550px; /*最小高さ*/
+  position: relative; /*main-copyの親要素に指定する*/
+  background-image: url(./image/hito.jpg); /*背景画像を指定する*/
+  background-size: cover; /*背景領域を完全に覆う最小サイズにする*/
+  background-position: center; /*中央に持ってくる*/
+  }
+  .main-copy{
+  position: absolute;
+  top: 50%; /*top,left,transformの3点セットで中央に配置する*/
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 177px;
+  color: rgb(197, 197, 197);
+  font-weight: bold;
+  }
+  .en-copy{
+  font-size: 7rem;
+  margin-bottom: 31px;
+  }
+  .sub-copy{
+  font-size: 2.5rem;
+  text-align: center;
+  }
+  /* //fv */
+
+  /* section-wrap */
+  .section-wrap{
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 200px;
+    background-color: #67A8FD;
+    height: 350px;
+    align-items: center;
+  }
+  .content-text{
+    font-size: 14px;
+    font-family: 'Noto Serif';
+    width: 100%;  
+  }
+  .content-box{
+    width: 420px;
+  
+  }
+.content-title{
+  font-size: 26px;
+  letter-spacing: 5px;
+}
+.content-title h2{
+  font-weight: normal;
+}
+.content-text{
+  display: flex;
+}
+.kigou p{
+  width: auto;
+  margin-right: 15px;
+}
+.text{
+  width: 300px;
+  font-size: 16px;
+}
+.wrap-img{
+  width: 366px;
+}
+  /* //section-wrap */
+
+/* ------------------------------ */
+/* Aboutのスタイル */
+/* ------------------------------ */
+.about {
+  height: auto;
+  }
+  .about-title{
+  text-align: center;
+  padding-top: 90px;
+  font-size: 23px;
+  letter-spacing: 3px;
+  }
+  .about-title h2{
+    margin: 0%;
+  }
+  .about-title p{
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  .about p{
+    font-family: 'Noto Serif';
+  }
+  .about-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: auto;
+  padding: 40px 200px;
+  }
+  .about-item img{
+  width: 100%;
+  height: 180px;
+  }
+  .about-item p:first-of-type{
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  }
+  .about-item p:last-child{
+  margin: 20px 0;
+  font-size: 14px;
+  text-align: left;
+  }
+  .about-item{
+  width: 31%;
+  margin: 0 5px 30px;
+  }
+  /* //about */
+
+/* 背景明暗の上に文字 */
+.bg-purchase{
+  background: url(./image/hito5.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 330px;
+  position: relative;
+  z-index: 0;
+  margin: 0 10px;
+  }
+.purchase-box{
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  padding-top: calc(32vh / 2 - 60px);
+  font-family: 'Noto Serif';
+  position: relative;
+}
+.bg-purchase::before{
+  content:  '';
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  background: inherit;
+  filter:brightness(50%);
+  z-index: -1;
+}
+.purchase-list-text{
+  font-size: 14px;
+  text-align: center;
+}
+.purchase-icon{
+  content: '';
+  position: absolute;
+  left: 470px; 
+  padding: 10px 40px;
+  background-color: #67A8FD;
+  text-align: center;
+  margin-top: 5px;
+}
+.purchase-icon img{
+  width: 30px;
+  margin-right: 20px;
+}
+.section-content{
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Noto Serif';
+  padding: 0 200px;
+  justify-content: center;
+}
+h4{
+  font-size: 36px;
+  letter-spacing: 5px;
+  margin: 80px 250px 50px;
+}
+.date{
+  padding-left: 15px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.date img{
+  width: 3vw;
+}
+.news-img img{
+  width: 5.5vw;
+  height: 6.5vw;
+  margin-top: 0;
+}
+.news-img{
+  display: flex;
+}
+.news-img p{
+  margin-left: 10px;
+  margin-top: 0;
+  font-size: 14px;
+}
+.news{
+  width: 37%;
+  margin: 0 30px 50px;
+}
+
+.footer-purchase{
+  background: url(./image/hito12.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 330px;
+  position: relative;
+  z-index: 0;
+  margin: 0 10px;
+  }
+.footer-box{
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-top: calc(5vh / 2 - 20px);
+  font-family: 'Noto Serif';
+  position: relative;
+}
+.footer-purchase::before{
+  content:  '';
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  background: inherit;
+  filter:brightness(40%);
+  z-index: -1;
+}
+.footer-title{
+  font-size:26px;
+  margin-left: 80px;
+}
+.footer-list{
+  display: flex;
+  list-style-type: none;   /* リストの黒丸を消す */
+}
+ul.footer-list{
+  margin: 70px 50px;
+  font-size: 16px;
+}
+.footer-item{
+  padding: 0 10px;
+}
